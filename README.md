@@ -1,4 +1,4 @@
-# Budget-Aware Diabetes Risk Triage (3-Class): Student Model + Escalation (LLM Review)
+# Budget-Aware Diabetes Risk Triage: Student Model + Escalation (LLM Review)
 ```markdown
 # Diabetes Risk Triage System (3-Class) — FT-Transformer + (Optional) LLM Review (WIP)
 
