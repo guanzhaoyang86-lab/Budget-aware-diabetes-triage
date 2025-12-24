@@ -121,7 +121,7 @@ Planned end-to-end system (design document aligns with the accompanying PDF):
 3. **Budget-aware triage** (risk–coverage trade-off for escalation)
 4. **Structured second opinion** (LLM JSON review + validation)
 5. **Fusion decision** (agreement/weighted fusion/gating; stacking later)
-6. **(Optional) Distillation** (LLM soft labels to improve the student model)
+6. **Distillation** (LLM soft labels to improve the student model)
 7. **Report generation** (structured JSON → clinical/nursing-style report)
 8. **Reliability & fairness** (ECE/Brier, rejection curves/AURC, conformal prediction, ΔTPR/ΔECE)
 
