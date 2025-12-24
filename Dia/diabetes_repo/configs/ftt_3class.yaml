@@ -1,0 +1,57 @@
+seed: 2025
+
+data:
+  csv_path: "/hy-tmp/糖尿病/Data/diabetes_012_health_indicators_BRFSS2015.csv"
+
+  target_col: "Diabetes_012"
+  auto_detect_cols: true
+  categorical_threshold: 20
+  split:
+    test_size: 0.30
+    val_size_in_temp: 0.50
+    stratify: true
+  group_cols:
+    Sex: "Sex"
+    Age: "Age"
+    Education: "Education"
+    Income: "Income"
+
+preprocess:
+  scaler: "robust"
+
+model:
+  d_model: 96
+  n_heads: 6
+  n_layers: 4
+  ff_mult: 4
+  dropout: 0.2
+  n_classes: 3
+
+train:
+  lr: 0.001
+  batch_size: 2048
+  epochs: 10
+  patience: 3
+  weight_decay: 0.0001
+  label_smoothing: 0.05
+  grad_clip: 1.0
+  amp: true
+  num_workers: 2
+
+calibration:
+  method: "temperature"
+  lbfgs_steps: 10
+
+eval:
+  ece_bins: 10
+  focus_classes: [1, 2]
+  ovr_threshold: 0.5
+
+cv:
+  enabled: false
+  n_splits: 5
+  shuffle: true
+
+output:
+  root_dir: "outputs"
+  run_name: "ftt_3class"
